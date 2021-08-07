@@ -6,7 +6,7 @@ In this project, disaster messages derived from [Figure Eight](https://appen.com
 
 For example, when I enter the disaster related message "I am very starving. I need food and water.", my ML-multi label classifier will show us the corresponding labels.
 
-<img src="demo.png" />
+<img src="demo.PNG" />
 
 
 ## File Descriptions
