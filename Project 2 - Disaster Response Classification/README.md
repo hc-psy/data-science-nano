@@ -2,7 +2,11 @@
 
 In this project, disaster messages derived from [Figure Eight](https://appen.com/) was analyzed, through which I therefore built a web-app which can classify messages into 36 categories with machine-learning techniques.
 
-![demo](demo.png)
+## Demo
+
+For example, when I enter the disaster related message "I am very starving. I need food and water.", my ML-multi label classifier will show us the corresponding labels.
+
+<img src="demo.png" />
 
 
 ## File Descriptions
