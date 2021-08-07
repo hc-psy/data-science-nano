@@ -2,6 +2,9 @@
 
 In this project, disaster messages derived from [Figure Eight](https://appen.com/) was analyzed, through which I therefore built a web-app which can classify messages into 36 categories with machine-learning techniques.
 
+![demo](demo.png)
+
+
 ## File Descriptions
 
 ```
