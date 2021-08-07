@@ -13,9 +13,8 @@ For example, when I enter the disaster related message "I am very starving. I ne
 
 ```
 ├── app
+│   ├── custom_transformer.py---------# MY DISASTER RELATED TRANSFORMATION
 │   ├── run.py------------------------# FLASK FILE THAT RUNS APP
-│   ├── static
-│   │   └── favicon.ico---------------# FAVICON FOR THE WEB APP
 │   └── templates
 │       ├── go.html-------------------# CLASSIFICATION RESULT PAGE OF WEB APP
 │       └── master.html---------------# MAIN PAGE OF WEB APP
@@ -23,7 +22,9 @@ For example, when I enter the disaster related message "I am very starving. I ne
 │   ├── DisasterResponse.db-----------# DATABASE TO SAVE CLEANED DATA TO
 │   ├── disaster_categories.csv-------# DATA TO PROCESS
 │   ├── disaster_messages.csv---------# DATA TO PROCESS
+│   ├── dis_res_ETL_pipeline.ipynb----# ETL PROCESS DETAILED VERSION
 │   └── process_data.py---------------# PERFORMS ETL PROCESS
 ├── models
+│   ├── custom_transformer.py---------# MY DISASTER RELATED TRANSFORMATION
 │   └── train_classifier.py-----------# PERFORMS CLASSIFICATION TASK
 ```
