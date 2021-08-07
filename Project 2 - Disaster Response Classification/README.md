@@ -55,17 +55,22 @@ git clone https://github.com/hc-psy/ds-hub.git
 cd ds-hub/'Project 2 - Disaster Response Classification'
 ```
 
+### ETL pipeline
+
 In the project's root directory, run the ETL pipeline that cleans and stores data in the database.
 
 ```
 python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db
 ```
+### ML pipeline
 
 Then, run the ML pipeline.
 
 ```
 python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
 ```
+
+### Flask Webapp
 
 Last, run the flask webapp based on ML pipeline.
 
