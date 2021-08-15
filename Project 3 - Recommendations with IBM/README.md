@@ -1,6 +1,6 @@
 # Recommendations With IBM
 
-This project aims at construct a recommendation system to recommend articles to readers, employing ML matrix factorization techniques.
+This project aims at constructing a recommendation system to recommend articles to readers, employing ML matrix factorization techniques.
 
 ## Overview
 
