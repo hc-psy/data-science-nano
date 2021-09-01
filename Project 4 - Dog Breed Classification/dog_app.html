@@ -13645,7 +13645,7 @@ $$<p>Here, <code>nb_samples</code> is the number of samples, or number of images
 <li>What percentage of the images in <code>human_files_short</code> have a detected dog?  </li>
 <li>What percentage of the images in <code>dog_files_short</code> have a detected dog?</li>
 </ul>
-<p><strong>Answer:</strong></p>
+<p><strong>Answer:</strong> (see below) As our expectation, the <code>dog_detector()</code> 100% correctly detected dogs in dog pictures, and it correctly classified all human as non-dog.</p>
 
 </div>
 </div>
@@ -13807,7 +13807,7 @@ for the first 100 dog images, 100.0% of them is detected as dogs.
 <p>We have imported some Python modules to get you started, but feel free to import as many modules as you need.  If you end up getting stuck, here's a hint that specifies a model that trains relatively fast on CPU and attains &gt;1% test accuracy in 5 epochs:</p>
 <p><img src="images/sample_cnn.png" alt="Sample CNN"></p>
 <p><strong>Question 4:</strong> Outline the steps you took to get to your final CNN architecture and your reasoning at each step.  If you chose to use the hinted architecture above, describe why you think that CNN architecture should work well for the image classification task.</p>
-<p><strong>Answer:</strong></p>
+<p><strong>Answer:</strong> I chose to use the hinted architecture above. Given that CNNs are inspired by the organization of the animal visual cortex (in neuroscience visual process is a signal dimension reduction process), the premise that CNNs could work on image recognition/classification is the ability of reducing the 2-dimensional image to 1-dimensional vector (classification labels). In particular, regarding the model, a convolutional layer is comprised of a set of filters with a fixed height and width, resembling human eyes screening every subfield of an image. A pooling layer is responsible for reducing the dimension of the input. Hence, CNN architecture should work well for the image classification task.</p>
 
 </div>
 </div>
@@ -14791,6 +14791,9 @@ test_{network} = bottleneck_features['test']</code></pre>
 </code></pre>
 <p><strong>Question 5:</strong> Outline the steps you took to get to your final CNN architecture and your reasoning at each step.  Describe why you think the architecture is suitable for the current problem.</p>
 <p><strong>Answer:</strong></p>
+<p>Outline the steps: We here will adopt a more complex pre-trained model, ResNet-50. The bottleneck features that produced by ResNet-50 will pass through, like step 4, a very simple training network that essentially consists of just one global average pooling layer and a final dense output layer.</p>
+<p>My reasoning at ResNet-50: ResNet-50 has a more sophisticated structure than VGG16, featuring more layers and, more importantly, the residual mechanism, which prevents the model from losing information due to passing through too many layers. Hence, it has more predictive power than VGG16 and is suitable for the current problem.</p>
+<p>Moreover, I will experiment on optimizers and batch sizes. Specifically, I will experiment on a 2-by-2 design regarding optimizer (rmsprop and adam) and batch size (32 and 64). In common sense, adam optimization can be regarded as a combination and momentum; and a larger batch size can lead to a more stable result. Thus, one may expect that the model with adam and 64 batch-size could perform the best among them.</p>
 
 </div>
 </div>
